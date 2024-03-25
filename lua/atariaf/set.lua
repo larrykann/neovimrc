@@ -32,3 +32,12 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
+-- Set the background transparency.
+vim.api.nvim_create_autocmd("VimEnter", {
+  pattern = "*",
+  callback = function()
+    vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]
+  end,
+})
+
+
